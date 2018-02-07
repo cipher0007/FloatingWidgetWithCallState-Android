@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <!--Root container-->
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        tools:ignore="UselessParent">
+
+        <!--View while view is collapsed-->
+        <RelativeLayout
+            android:id="@+id/collapse_view"
+            android:layout_width="206dp"
+            android:layout_height="206dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--Icon of floating widget -->
+            <!--<ImageView
+                android:id="@+id/collapsed_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_android_circle"
+                tools:ignore="ContentDescription"/> -->
+
+           <!-- <com.wang.avi.AVLoadingIndicatorView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="5dp"
+                android:visibility="visible"
+                app:indicatorName="BallPulseIndicator" />-->
+            <com.skyfishjy.library.RippleBackground
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/content1"
+                app:rb_color="#0099CC"
+                app:rb_radius="40dp"
+app:rb_type="fillRipple"
+                app:rb_rippleAmount="6"
+                app:rb_duration="3000"
+                app:rb_scale="2">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/collapsed_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/yash"
+android:layout_centerInParent="true"
+                app:civ_border_color="#FFffffff"
+                app:civ_border_width="2dp" /></com.skyfishjy.library.RippleBackground>
+
+
+            <!--Close button-->
+            <!-- <ImageView
+                 android:id="@+id/close_btn"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:layout_marginLeft="40dp"
+                 android:src="@drawable/ic_close"
+                 tools:ignore="ContentDescription"/> -->
+        </RelativeLayout>
+
+
+        <!--View while view is expanded-->
+        <RelativeLayout
+            android:id="@+id/expanded_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/collapsed_iv1"
+                android:layout_width="106dp"
+                android:layout_height="106dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="5dp"
+                android:src="@drawable/yash"
+                app:civ_border_color="#FFffffff"
+                app:civ_border_width="2dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+                <com.skyfishjy.library.RippleBackground
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/content"
+                    app:rb_color="#0099CC"
+                    app:rb_radius="50dp"
+
+                    app:rb_rippleAmount="6"
+                    app:rb_duration="3000"
+                    app:rb_scale="5"></com.skyfishjy.library.RippleBackground>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingTop="50dp"
+                        android:text="Yash"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingTop="10dp"
+                        android:gravity="center"
+                        android:text="I am in examination Hall,i will call you as soon as i am free"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>    <!--Album image for the song currently playing.-->
+
+    </RelativeLayout>
+</FrameLayout>
